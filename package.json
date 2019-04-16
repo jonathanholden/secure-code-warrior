@@ -1,18 +1,28 @@
 {
   "name": "secure-code-warrior",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "e2e": "set TS_NODE_PROJECT=./e2e/tsconfig.e2e.json&&tsc --p ./e2e/tsconfig.e2e.json && protractor ./tmp/config/protractor.conf.js",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start",
+    "tsc": "tsc --p ./e2e/tsconfig.e2e.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jonathan Holden",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "4.1.7",
     "@types/cucumber": "4.0.5",
+    "@types/node": "11.13.2",
+    "@types/selenium-webdriver": "^4.0.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
     "cucumber": "5.1.0",
     "cucumber-html-reporter": "4.0.5",
-    "protractor": "5.4.2"
+    "mkdirp": "0.5.1",
+    "protractor": "5.4.2",
+    "protractor-cucumber-framework": "6.1.1",
+    "ts-node": "8.0.3",
+    "typescript": "3.4.2"
   }
 }
